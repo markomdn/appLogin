@@ -1,0 +1,16 @@
+<div class="container containerLogin">
+	<div class="row">
+	    <div class="input-field col s12">
+	      <input id="email" type="text" ng-model="userName" class="validate">
+	      <label for="email">User Name</label>
+	    </div>
+		<div class="input-field col s12">
+	      <input id="password" type="password" ng-model="pass" class="validate">
+	      <label for="password">Password</label>
+	    </div>
+	    <div class="input-field col s12">
+	      <button ng-click="login(userName, pass)" class="btn blue largeButton">Login</button>
+	    </div>
+  	</div>
+</div>
+<div ui-view></div>

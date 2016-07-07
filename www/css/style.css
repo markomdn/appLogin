@@ -1,0 +1,32 @@
+/* Empty. Add your own CSS if you like */
+.containerLogin{
+	margin-top: 30px !important;
+	padding: 20px;
+}
+
+.largeButton{
+	width: 100%;
+}
+
+.fixed-action-btn.horizontal {
+    position: absolute !important;
+    right: 24px;
+    top: 10%;
+}
+
+.btn-floating img{
+	width: 56px;
+}
+
+.loginTrue{
+	display: block;
+}
+
+.loginFalse{
+	display: none;
+}
+
+.errorLogin{
+	background-color: #ffa9a9;
+	margin: 35px;
+}
