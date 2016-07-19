@@ -1,12 +1,19 @@
+<nav class="green darken-1 navbar-fixed">
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Login</a>
+    </div>
+  </nav>
 <div class="container containerLogin">
 	<div class="row">
 	    <div class="input-field col s12">
 	      <input id="email" type="text" ng-model="userName" class="validate">
-	      <label for="email">User Name</label>
+	      <label for="email">Usuario</label>
+	      <div class="errorLogin" ng-hide="userError"><span>Usuario Invalido</span></div>
 	    </div>
 		<div class="input-field col s12">
 	      <input id="password" type="password" ng-model="pass" class="validate">
-	      <label for="password">Password</label>
+	      <label for="password">Contraseña</label>
+	      <div class="errorLogin" ng-hide="passError"><span>Contraseña Erronea</span></div>
 	    </div>
 	    <div class="input-field col s12">
 	      <button ng-click="login(userName, pass)" class="btn blue largeButton">Login</button>

@@ -1,0 +1,45 @@
+<div class="container">
+	<h5>Comentarios</h5>
+	<div class="row">
+		<form class="col s12">
+			<div class="row">
+				<div class="input-field col s12">
+					<textarea id="textarea1" class="materialize-textarea" ng-model="comentario"></textarea>
+					<label for="textarea1">ingrese sus comentarios</label>
+				</div>
+			</div>
+		</form>
+	</div>
+	<br>
+</div>
+<div class="row divWid">
+	<div class="col s6">
+		<button ui-sref="main.createVenta.paso4" class="green darken-1 btn widButtonDoble">Atras</button>
+	</div>
+	<div class="col s6">
+		<button href="#modal1" class="modal-trigger green darken-1 btn widButtonDoble" ng-click="createVenta5(comentario, franja)" modal>Siguiente</button>
+	</div>
+</div>
+
+<div id="modal1" class="modal modal-fixed-footer">
+	<div class="modal-content">
+		<h5>Producto Agregado</h5>
+		<br>
+		<div>
+			<ol class="orderList">
+				<li>Producto</li>
+				<li>Cantidad</li>
+			</ol>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<div class="row divWidFooter">
+			<div class="col s6">
+				<a ng-click="createPaso5()" class="modal-close green darken-1 btn widButtonDoble">+ Otro</a>
+			</div>
+			<div class="col s6">
+				<a ng-click="endCreate()" class="modal-close green darken-1 btn widButtonDoble">Finalizar</a>
+			</div>
+		</div>
+	</div>
+</div>

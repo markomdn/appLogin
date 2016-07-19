@@ -1,0 +1,36 @@
+<div class="collection">
+  <div class="collection-item headerCollection">
+    <div class="row">
+      <div class="col s2">
+        <span>Nro</span>
+      </div>
+      <div class="col s4">
+        <span>Fecha</span>
+      </div>
+      <div class="col s4">
+        <span>Hora</span>
+      </div>
+      <div class="col s2">
+        <span>Cliente</span>
+      </div>
+    </div>
+  </div>
+  <a ng-click="getVenta(venta.id)" class="collection-item" ng-repeat="venta in ventas | filter:searchText">
+    <div class="row">
+      <div class="col s2">
+        <span>{{venta.id}}</span>
+      </div>
+      <div class="col s4">
+        <span>{{venta.fecha}}</span>
+      </div>
+      <div class="col s4">
+        <span>{{venta.hora}}</span>
+      </div>
+      <div class="col s2">
+        <span>{{venta.cliente}}</span>
+      </div>
+    </div>
+  </a>
+</div>
+<button class="btn widButton green darken-1 ">Enviar</button>
+<a ng-click="createVenta()" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>

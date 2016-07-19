@@ -1,0 +1,25 @@
+<div class="container">
+	<br>
+	<h6><b>Cliente: </b>{{venta.cliente}}</h6>
+	<h6><b>Nro Pedido: </b>{{venta.nroPedido}}</h6>
+	<h6><b>Fecha: </b>{{venta.fecha}}</h6>
+	<br>
+	<h6><b>Detalle</b></h6>
+	<table>
+        <thead>
+          <tr>
+              <th data-field="id">Producto</th>
+              <th data-field="name">Cantidad</th>
+              <th data-field="price">Precio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr ng-repeat="producto in venta.productos">
+            <td>{{producto.nombre}}</td>
+            <td>{{producto.cantidad}} {{producto.tipoCantidad}}</td>
+            <td>${{producto.cantidad * producto.precioUnitario}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>

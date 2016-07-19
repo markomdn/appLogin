@@ -1,0 +1,27 @@
+<div class="container">
+	<h5>Cliente</h5>
+	<div input-field>
+	    <select class="" ng-change="setCliente(cliente)" ng-model="cliente" material-select watch>
+	        <option ng-repeat="cli in clientes" value="{{cli.id}}">{{cli.nombre}}</option>
+	    </select>
+      	<div class="errorLogin" ng-hide="clienteError"><span>Seleccione un cliente</span></div>
+	</div>
+</div>
+<div class="container">
+	<br>
+	<h5>Entrega - Franja Horaria</h5>
+	<div input-field>
+		<select class="" ng-change="setFranja(franja)" ng-model="franja" material-select watch>
+	        <option ng-repeat="fra in franjas" value="{{fra.id}}">{{fra.hora}}</option>
+	    </select>
+      	<div class="errorLogin" ng-hide="franjaError"><span>Seleccione un horario de entrega</span></div>
+	</div>
+</div>
+<div class="row divWid">
+	<div class="col s6">
+		<button ui-sref="main.ventas.lista" class="green darken-1 btn widButtonDoble">Atras</button>
+	</div>
+	<div class="col s6">
+		<button ng-click="createPaso1()" class="green darken-1 btn widButtonDoble">Siguiente</button>
+	</div>
+</div>

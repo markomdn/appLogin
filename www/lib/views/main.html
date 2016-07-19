@@ -1,21 +1,31 @@
-<div class="fixed-action-btn horizontal click-to-toggle {{classLogin}}" style="bottom: 45px; right: 24px;">
-	<a class="btn-floating btn-large red">
-		<img src="https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-xpt1/v/t1.0-9/12187876_1203978042950689_2220130091332491691_n.jpg?oh=8997b1ec386b3c743a0cd0370a0b1bf1&oe=57F7540F&__gda__=1475852687_45a6a106b26e96b9e02989c2728cf53b">
-	</a>
-	<ul>
-		<li>
-			<a  ng-click="logout()" class="btn-floating red"><i class="material-icons">insert_chart</i>
-			</a>
-		</li>
-		<li>
-			<a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a>
-		</li>
-		<li>
-			<a class="btn-floating green"><i class="material-icons">publish</i></a>
-		</li>
-		<li>
-			<a class="btn-floating blue"><i class="material-icons">attach_file</i></a>
-		</li>
-	</ul>
-</div>
+<nav class="green darken-1 navbar-fixed">
+	<div class="nav-wrapper">
+		<a href="#" data-activates="mobile-demo" data-sidenav="left" data-menuwidth="00" data-closeonclick="false" class="button-collapse"><i class="material-icons">menu</i></a>
+		<form class="searchForm">
+			<div class="input-field">
+				<input id="search" type="search" ng-model="searchText" required>
+				<label for="search"><i class="material-icons">search</i></label>
+				<i class="material-icons">close</i>
+			</div>
+		</form>
+		<ul class="side-nav" id="mobile-demo">
+			<li><a class="userNav">{{userData.userName}}</a></li>
+			<hr>
+			<li>
+				<a ui-sref="main.ventas.lista" ng-click="clickVentas()" class="linkNav"><i class="material-icons left">attach_money</i>Mis Ventas</a>
+			</li>
+			<li>
+				<a ui-sref="main.ventas" class="linkNav"><i class="material-icons left">supervisor_account</i>Mis Clientes</a>
+			</li>
+			<li>
+				<a ui-sref="main.reclamos" class="linkNav"><i class="material-icons left">priority_high</i>Mis Reclamos</a>
+			</li>
+			<li>
+				<a ng-click="logout()" class="linkNav"><i class="material-icons left">cancel</i>Cerrar Sesión</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+<div ui-view></div>
 

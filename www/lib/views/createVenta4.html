@@ -1,0 +1,23 @@
+<div class="container">
+	<h5>Precio 1kg</h5>
+	<div class="input-field col s12">
+		<input type="number" ng-model="precio" step="0.01" value="{{newProducto.precioUnitario}}">
+      	<div class="errorLogin" ng-hide="precioError"><span>Ingrese el precio</span></div>
+	</div>
+	<br>
+	<h5>Tipo de Venta</h5>
+	<div class="input-field col s12">
+		<select class="" ng-change="setTipoVenta(tipoVenta)" ng-model="tipoVenta" material-select watch>
+	        <option ng-repeat="t in tiposVentas" value="{{t.tipo}}">Tipo {{t.tipo}}</option>
+	    </select>
+      	<div class="errorLogin" ng-hide="tipoVentaError"><span>Seleccione un tipo de venta</span></div>
+	</div>
+</div>
+<div class="row divWid">
+	<div class="col s6">
+		<button ui-sref="main.createVenta.paso3" class="green darken-1 btn widButtonDoble">Atras</button>
+	</div>
+	<div class="col s6">
+		<button ng-click="createPaso4()" class="green darken-1 btn widButtonDoble">Siguiente</button>
+	</div>
+</div>

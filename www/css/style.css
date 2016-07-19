@@ -30,3 +30,82 @@
 	background-color: #ffa9a9;
 	margin: 35px;
 }
+
+.errorLogin{
+	background-color: rgba(244, 67, 54, 0.6);
+	color: white;
+	opacity: 0.9;
+	margin: 0;
+	padding: 10px;
+	border-radius: 2px
+}
+
+.userNav{
+	font-size: 2rem !important;
+	color: green !important;
+}
+
+.iconNav{
+	display: inline !important;
+	font-size: 10px !important;
+}
+
+.linkNav{
+	font-size: 20px !important;
+}
+
+.tabsMain{
+	color: #43A047 !important
+} 
+
+.indicator{
+	background-color: #43A047 !important;
+}
+
+.btn-floating{
+	position: absolute;
+	bottom: 60px !important;
+	right: 20px !important;
+}
+
+.headerCollection{
+	padding-bottom: 0 !important;
+	font-size: 15px;
+	border-bottom: 1px solid !important;
+}
+
+.widButton, .divWid{
+	width: 100% !important;
+	position: fixed; !important;
+	bottom: 0 !important;
+	left: 0;
+}
+
+.widButtonFooter{
+	width: 97% !important;
+	position: absolute; !important;
+	bottom: 0 !important;
+}
+
+.widButtonDoble{
+	width: 100% !important;
+}
+
+#search{
+	position: absolute;
+	margin-top: 2%;
+	height: 42px;
+	width: 80%;
+}
+
+.searchForm{
+	margin-left: 15%;
+}
+
+.modal .modal-footer{
+	height: 19% !important;
+}
+
+.orderList{
+	list-style-type: square;
+}

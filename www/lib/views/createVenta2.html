@@ -1,0 +1,55 @@
+<div class="container">
+	<h5>Fecha Entrega</h5>
+	<div class="input-field col s12">
+		<input input-date
+		    type="text"
+		    name="created"
+		    id="inputCreated"
+		    ng-model="currentTime"
+		    container=""
+		    format="dd/mm/yyyy"
+		    months-full="{{ month }}"
+		    months-short="{{ monthShort }}"
+		    weekdays-full="{{ weekdaysFull }}"
+		    weekdays-short="{{ weekdaysShort }}"
+		    weekdays-letter="{{ weekdaysLetter }}"
+		    disable="disable"
+		    min="{{ minDate }}"
+		    max="{{ maxDate }}"
+		    today="today"
+		    clear="clear"
+		    close="close"
+		    select-years="15"
+		    on-start="onStart()"
+		    on-render="onRender()"
+		    on-open="onOpen()"
+		    on-close="onClose()"
+		    on-set="onSet()"
+		    on-stop="onStop()" />
+      	<div class="errorLogin" ng-hide="fechaError"><span>Seleccione un tipo de trasporte</span></div>		
+	</div>
+	<br>
+	<h5>Transporte</h5>
+	<div class="input-field col s12">
+		<select class="" ng-change="setTransporte(trasporte)" ng-model="trasporte" material-select watch>
+	        <option ng-repeat="transp in tipoTransporte" value="{{transp.id}}">{{transp.tipo}}</option>
+	    </select>
+      	<div class="errorLogin" ng-hide="transporteError"><span>Seleccione un tipo de trasporte</span></div>
+	</div>
+	<br>
+	<h5>Direccion de Entrega</h5>
+	<div class="input-field col s12">
+		<select class="" ng-change="setDireccion(direccionEntrega)" ng-model="direccionEntrega" material-select watch>
+	        <option ng-repeat="dire in direcciones" value="{{dire.id}}">{{dire.direccion}}</option>
+	    </select>
+      	<div class="errorLogin" ng-hide="direccionError"><span>Seleccione una direccion</span></div>
+	</div>
+</div>
+<div class="row divWid">
+	<div class="col s6">
+		<button ui-sref="main.createVenta.paso1" class="green darken-1 btn widButtonDoble">Atras</button>
+	</div>
+	<div class="col s6">
+		<button ng-click="createPaso2()" class="green darken-1 btn widButtonDoble">Siguiente</button>
+	</div>
+</div>
